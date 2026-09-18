@@ -4,7 +4,6 @@ import torch
 import os
 import shutil
 import logging
-import requests
 from pathlib import Path
 
 logger = logging.getLogger(__name__)
