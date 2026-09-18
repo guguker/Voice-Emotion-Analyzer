@@ -1,13 +1,13 @@
-# Игнорируем файлы safetensors
-*.safetensors
-
-# Игнорируем виртуальное окружение
 .venv/
-
-# Игнорируем всякие временные файлы
+venv/
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
-.env
+*.py[cod]
 .DS_Store
+.env
+.env.*
+!.env.example
+models/
+*.log
+recordings/
+.cache/
+.pytest_cache/

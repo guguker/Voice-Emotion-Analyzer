@@ -26,11 +26,11 @@ class AudioProcessor:
             if len(audio_data.shape) > 1:
                 audio_data = np.mean(audio_data, axis=1)
                 logger.debug("Преобразование в моно")
-            
+
             # Нормализация
             audio_data = audio_data / np.max(np.abs(audio_data))
             logger.debug("Аудио нормализовано")
-            
+
             return audio_data
         except Exception as e:
             logger.error(f"Ошибка при обработке аудио: {e}")
@@ -44,7 +44,7 @@ class AudioProcessor:
             if len(audio_data.shape) > 1:
                 audio_data = np.mean(audio_data, axis=1)
                 logger.debug("Преобразование в моно перед сохранением")
-                
+
             sf.write(file_path, audio_data, sr)
             logger.debug(f"Аудио сохранено в {file_path}")
         except Exception as e:

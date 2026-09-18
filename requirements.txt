@@ -6,3 +6,4 @@ matplotlib
 soundfile
 customtkinter
 librosa
+Pillow
